@@ -2,7 +2,7 @@
   <div>
     <h1>{{ msg }}</h1>
     <div class="columns">
-      <div class="column　is-one-quarter"></div>
+      <div class="column is-one-quarter"></div>
       <div class="column is-two-quarters">
         <Chat
           v-if="visible"
@@ -28,20 +28,20 @@
           @onClose="onClose"
         />
       </div>
-      <div class="column　is-one-quarter"></div>
+      <div class="column is-one-quarter"></div>
     </div>
   </div>
 </template>
 
 <script>
 import { Chat } from 'vue-quick-chat'
-import 'vue-quick-chat/dist/vue-quick-chat.css';
+import 'vue-quick-chat/dist/vue-quick-chat.css'
 export default {
   name: 'Main',
   components: {
     Chat
   },
-  data() {
+  data () {
     return {
       msg: 'Test AIML APP',
       visible: true,
@@ -195,43 +195,43 @@ export default {
           borderRadius: '50%'
         }
       }
-    };
+    }
   },
   methods: {
-    onType: function(event) {
-      //here you can set any behavior
+    onType: function (event) {
+      // here you can set any behavior
     },
-    loadMoreMessages(resolve) {
+    loadMoreMessages (resolve) {
       setTimeout(() => {
-        resolve(this.toLoad); //We end the loading state and add the messages
-        //Make sure the loaded messages are also added to our local messages copy or they will be lost
-        this.messages.unshift(...this.toLoad);
-        this.toLoad = [];
-      }, 1000);
+        resolve(this.toLoad) // We end the loading state and add the messages
+        // Make sure the loaded messages are also added to our local messages copy or they will be lost
+        this.messages.unshift(...this.toLoad)
+        this.toLoad = []
+      }, 1000)
     },
-    onMessageSubmit: function(message) {
+    onMessageSubmit: function (message) {
       /*
        * example simulating an upload callback.
        * It's important to notice that even when your message wasn't send
        * yet to the server you have to add the message into the array
        */
-      this.messages.push(message);
+      this.messages.push(message)
 
       /*
        * you can update message state after the server response
        */
       // timeout simulating the request
       setTimeout(() => {
-        message.uploaded = true;
-      }, 2000);
+        message.uploaded = true
+      }, 2000)
     },
-    onClose() {
-      this.visible = false;
+    onClose () {
+      this.visible = false
     },
-    onImageSelected(files, message) {
+    onImageSelected (files, message) {
       let src =
-        'https://149364066.v2.pressablecdn.com/wp-content/uploads/2017/03/vue.jpg';
-      this.messages.push(message);
+        'https://149364066.v2.pressablecdn.com/wp-content/uploads/2017/03/vue.jpg'
+      this.messages.push(message)
       /**
        * This timeout simulates a requisition that uploads the image file to the server.
        * It's up to you implement the request and deal with the response in order to
@@ -239,25 +239,25 @@ export default {
        */
       setTimeout(
         res => {
-          message.uploaded = true;
-          message.src = res.src;
+          message.uploaded = true
+          message.src = res.src
         },
         3000,
         { src }
-      );
+      )
     },
-    onImageClicked(message) {
+    onImageClicked (message) {
       /**
        * This is the callback function that is going to be executed when some image is clicked.
        * You can add your code here to do whatever you need with the image clicked. A common situation is to display the image clicked in full screen.
        */
-      console.log('Image clicked', message.src);
+      console.log('Image clicked', message.src)
     }
   }
-};
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 h1,
 h2 {
