@@ -50,24 +50,24 @@ export default {
           name: 'Arnaldo',
           id: 1,
           profilePicture:
-            "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg"
+            'https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg'
         },
         {
-          name: "José",
+          name: 'José',
           id: 2,
           profilePicture:
-            "https://lh3.googleusercontent.com/-G1d4-a7d_TY/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJPez_wX5UCJztzEUeCxOd7HBK7-jA.CMID/s83-c/photo.jpg"
+            'https://lh3.googleusercontent.com/-G1d4-a7d_TY/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJPez_wX5UCJztzEUeCxOd7HBK7-jA.CMID/s83-c/photo.jpg'
         }
       ],
       myself: {
-        name: "Matheus S.",
+        name: 'Matheus S.',
         id: 3,
         profilePicture:
-          "https://lh3.googleusercontent.com/-G1d4-a7d_TY/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJPez_wX5UCJztzEUeCxOd7HBK7-jA.CMID/s83-c/photo.jpg"
+          'https://lh3.googleusercontent.com/-G1d4-a7d_TY/AAAAAAAAAAI/AAAAAAAAAAA/AAKWJJPez_wX5UCJztzEUeCxOd7HBK7-jA.CMID/s83-c/photo.jpg'
       },
       messages: [
         {
-          content: "received messages",
+          content: 'received messages',
           myself: false,
           participantId: 1,
           timestamp: {
@@ -79,10 +79,10 @@ export default {
             second: 3,
             millisecond: 123
           },
-          type: "text"
+          type: 'text'
         },
         {
-          content: "sent messages",
+          content: 'sent messages',
           myself: true,
           participantId: 3,
           timestamp: {
@@ -94,10 +94,10 @@ export default {
             second: 3,
             millisecond: 123
           },
-          type: "text"
+          type: 'text'
         },
         {
-          content: "other received messages",
+          content: 'other received messages',
           myself: false,
           participantId: 2,
           timestamp: {
@@ -109,45 +109,45 @@ export default {
             second: 3,
             millisecond: 123
           },
-          type: "text"
+          type: 'text'
         }
       ],
-      chatTitle: "My chat title",
-      placeholder: "send your message",
+      chatTitle: 'My chat title',
+      placeholder: 'send your message',
       colors: {
         header: {
-          bg: "#d30303",
-          text: "#fff"
+          bg: '#d30303',
+          text: '#fff'
         },
         message: {
           myself: {
-            bg: "#fff",
-            text: "#bdb8b8"
+            bg: '#fff',
+            text: '#bdb8b8'
           },
           others: {
-            bg: "#fb4141",
-            text: "#fff"
+            bg: '#fb4141',
+            text: '#fff'
           },
           messagesDisplay: {
-            bg: "#f7f3f3"
+            bg: '#f7f3f3'
           }
         },
-        submitIcon: "#b91010",
-        submitImageIcon: "#b91010"
+        submitIcon: '#b91010',
+        submitImageIcon: '#b91010'
       },
       borderStyle: {
-        topLeft: "10px",
-        topRight: "10px",
-        bottomLeft: "10px",
-        bottomRight: "10px"
+        topLeft: '10px',
+        topRight: '10px',
+        bottomLeft: '10px',
+        bottomRight: '10px'
       },
       hideCloseButton: false,
       submitIconSize: 25,
-      closeButtonIconSize: "20px",
+      closeButtonIconSize: '20px',
       asyncMode: false,
       toLoad: [
         {
-          content: "Hey, John Doe! How are you today?",
+          content: 'Hey, John Doe! How are you today?',
           myself: false,
           participantId: 2,
           timestamp: {
@@ -161,7 +161,7 @@ export default {
           },
           uploaded: true,
           viewed: true,
-          type: "text"
+          type: 'text'
         },
         {
           content: "Hey, Adam! I'm feeling really fine this evening.",
@@ -178,7 +178,7 @@ export default {
           },
           uploaded: true,
           viewed: true,
-          type: "text"
+          type: 'text'
         }
       ],
       scrollBottom: {
@@ -190,9 +190,9 @@ export default {
         others: true,
         myself: true,
         styles: {
-          width: "30px",
-          height: "30px",
-          borderRadius: "50%"
+          width: '30px',
+          height: '30px',
+          borderRadius: '50%'
         }
       }
     };
@@ -230,7 +230,7 @@ export default {
     },
     onImageSelected(files, message) {
       let src =
-        "https://149364066.v2.pressablecdn.com/wp-content/uploads/2017/03/vue.jpg";
+        'https://149364066.v2.pressablecdn.com/wp-content/uploads/2017/03/vue.jpg';
       this.messages.push(message);
       /**
        * This timeout simulates a requisition that uploads the image file to the server.
@@ -251,7 +251,7 @@ export default {
        * This is the callback function that is going to be executed when some image is clicked.
        * You can add your code here to do whatever you need with the image clicked. A common situation is to display the image clicked in full screen.
        */
-      console.log("Image clicked", message.src);
+      console.log('Image clicked', message.src);
     }
   }
 };
