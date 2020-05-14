@@ -2,8 +2,8 @@
   <div>
     <h1>{{ msg }}</h1>
     <div class="columns">
-      <div class="column is-one-quarter"></div>
-      <div class="column is-two-quarters">
+      <div class="column is-one-quarter" ></div>
+      <div class="column is-two-quarter" style="height:600px">
         <Chat
           v-if="visible"
           :participants="participants"

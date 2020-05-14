@@ -12,7 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "heroku-postbuild": "npm run prod"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "buefy": "^0.8.18",
